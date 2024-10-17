@@ -22,6 +22,10 @@ for (const seat of allSeats) {
         ? "Premium Economy"
         : "Economy";
 
+    //   Seat Count increasing
+    let seatCount = getInnerTextValue("selected-seat-count") + 1;
+    setInnerTextValue("selected-seat-count", seatCount);
+
     //   Display selected Data
     showSelecetSeatInfo(seatName, className, 500);
     //   Total Price update
