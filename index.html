@@ -91,32 +91,33 @@
             <img src="/assets/hero.jpg" alt="" class="rounded-2xl" />
             <div
               class="color-overlay bg-black absolute top-0 left-0 right-0 bottom-0 opacity-70 rounded-2xl"
-            >
-              asdfjlasdkf
-            </div>
+            ></div>
             <div
               class="absolute top-[50%] left-[50%] -translate-x-2/4 -translate-y-2/4 space-y-4"
             >
-              <h2 class="text-5xl text-white font-extrabold">
+              <h2 class="text-base md:text-5xl text-white font-extrabold">
                 End-to-End Travel with <br />
                 <span class="text-green-600">NS Paribahan</span>
               </h2>
-              <p class="text-lg text-white">
+              <p class="text-base md:text-lg text-white hidden md:block">
                 Yes, you can run unit tests and view the results directly within
                 the app. The integrated testing features allow for a streamlined
                 .
               </p>
-              <button class="btn bg-green-600 font-medium text-black">
+              <button
+                onclick="goBookingSection()"
+                class="btn bg-green-600 font-medium text-black"
+              >
                 Buy Now
               </button>
             </div>
           </div>
         </div>
         <!-- Facts -->
-        <div class="relative -top-12">
-          <div class="flex gap-8 justify-center">
+        <div class="relative mt-8 lg:-top-12">
+          <div class="flex flex-col md:flex-row gap-8 justify-center">
             <div
-              class="flex gap-3 items-center bg-white shadow-lg p-5 border-b-4 border-green-400 rounded-lg"
+              class="flex gap-3 items-center justify-center bg-white shadow-lg p-5 border-b-4 border-green-400 rounded-lg"
             >
               <div class="text-secondary">
                 <div class="avatar">
@@ -131,7 +132,7 @@
               </div>
             </div>
             <div
-              class="flex gap-3 items-center bg-white shadow-lg p-5 border-b-4 border-green-400 rounded-lg"
+              class="flex gap-3 items-center justify-center bg-white shadow-lg p-5 border-b-4 border-green-400 rounded-lg"
             >
               <div class="text-secondary">
                 <div class="avatar">
@@ -146,7 +147,7 @@
               </div>
             </div>
             <div
-              class="flex gap-3 items-center bg-white shadow-lg p-5 border-b-4 border-green-400 rounded-lg"
+              class="flex gap-3 items-center justify-center bg-white shadow-lg p-5 border-b-4 border-green-400 rounded-lg"
             >
               <div class="text-secondary">
                 <div class="avatar">
@@ -170,7 +171,7 @@
         <h2 class="font-raleway text-4xl font-bold">Best offers for you</h2>
       </div>
 
-      <div class="grid grid-cols-2 gap-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div
           class="offer-card p-12 bg-pink-400 flex justify-between items-center rounded-lg"
         >
@@ -213,12 +214,13 @@
     </section>
     <!-- Ticket Booking Section -->
     <section
+      id="booking-section"
       class="bg-[#F7F8F8] rounded-t-[88px] mx-auto max-w-screen-2xl py-32"
     >
       <div>
         <!-- Section Heading -->
         <div
-          class="sec-heading text-center my-10 space-y-5 px-52 max-w-5xl mx-auto"
+          class="sec-heading text-center my-10 space-y-5 px-2 lg:px-52 max-w-5xl mx-auto"
         >
           <h2 class="font-raleway text-4xl font-bold">P.H Paribahan</h2>
           <p class="font-inter text-lg">
@@ -226,20 +228,24 @@
             app. The integrated testing features allow for a streamlined .
           </p>
         </div>
-        <div class="info-card bg-white flex p-10 rounded-lg max-w-6xl mx-auto">
+        <div
+          class="info-card bg-white flex flex-col lg:flex-row p-4 lg:p-10 rounded-lg max-w-6xl mx-auto"
+        >
           <div class="flex-1 p-5">
-            <div class="flex justify-between">
+            <div class="flex flex-col md:flex-row justify-between">
               <div class="flex items-center gap-3">
                 <div><img src="assets/bus.svg" alt="" class="w-16" /></div>
                 <div>
                   <h3 class="font-raleway text-3xl font-bold">
                     Greenline Paribahan
                   </h3>
-                  <p class="font-inter text-lg">Coach-009-WEB ! AC_Business</p>
+                  <p class="font-inter text-sm md:text-lg">
+                    Coach-009-WEB ! AC_Business
+                  </p>
                 </div>
               </div>
               <div
-                class="flex items-center gap-2 bg-[#1DD10026] rounded-lg px-3 py-1 text-green-600"
+                class="flex items-center my-3 md:my-0 gap-2 bg-[#1DD10026] rounded-lg px-3 py-1 text-green-600"
               >
                 <img
                   src="assets/car-seat-icon.svg"
@@ -260,14 +266,16 @@
                 <p>9:00 PM</p>
               </div>
               <hr />
-              <div class="flex justify-around">
+              <div class="flex flex-col md:flex-row justify-around">
                 <button class="btn">Boarding Point - Laxmipur</button>
                 <button class="btn">Dropping Point - Bogura</button>
                 <button class="btn">Est. Time - 11 Hour</button>
               </div>
             </div>
           </div>
-          <div class="w-72 flex flex-col justify-center items-center space-y-4">
+          <div
+            class="w-full md:w-72 flex flex-col justify-center items-center space-y-4"
+          >
             <div><img src="assets/taka.svg" alt="" /></div>
             <h3 class="font-raleway text-3xl font-bold">550 Taka</h3>
             <p class="font-inter text-lg">Per Seat</p>
@@ -276,7 +284,7 @@
       </div>
       <!-- Seat Selection Area -->
       <section
-        class="seat-info bg-white flex rounded-lg max-w-6xl mx-auto mt-5 p-8"
+        class="seat-info bg-white flex flex-col lg:flex-row rounded-lg max-w-6xl mx-auto mt-5 p-8"
       >
         <!-- Seats Chart Area -->
         <div class="flex-1">
@@ -306,7 +314,7 @@
           </div>
           <!-- Seat Chart -->
           <div
-            class="grid grid-cols-[40px_1fr_1fr_1fr_1fr] gap-x-10 gap-y-5 place-items-center"
+            class="grid grid-cols-5 lg:grid-cols-[40px_1fr_1fr_1fr_1fr] gap-x-2 lg:gap-x-10 gap-y-5 place-items-center"
           >
             <button id="A">A</button>
             <button id="A1" class="seat py-4 px-11 bg-gray-100 rounded-xl">
@@ -441,9 +449,15 @@
           </div>
         </div>
         <!-- Display Cost -->
-        <div class="w-2/5 ml-12">
+        <div class="w-full lg:w-2/5 ml-0 md:ml-12 my-10 md:my-0">
           <p>Selected Seats and Price</p>
           <hr />
+          <div class="text-center my-2 text-lg font-bold">
+            <p
+              id="err-msg"
+              class="text-red-700 font-bold bg-red-200 rounded-full"
+            ></p>
+          </div>
           <div class="bg-[#F7F8F8] p-4 rounded-lg space-y-3 mt-3">
             <table class="table table-zebra border-separate text-lg">
               <thead class="text-lg">
@@ -463,7 +477,7 @@
             </table>
             <div id="discount"></div>
             <!--  Input box -->
-            <div class="relative">
+            <div id="coupon-box" class="relative">
               <input
                 id="coupon-input"
                 type="text"
@@ -483,6 +497,7 @@
               <p>BDT <span id="grand-total"> 0 </span></p>
             </div>
           </div>
+
           <!-- Passanger form -->
           <div class="mt-4 space-y-4">
             <label class="form-control w-full max-w-sm">
