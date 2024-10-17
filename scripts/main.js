@@ -22,6 +22,11 @@ for (const seat of allSeats) {
         ? "Premium Economy"
         : "Economy";
 
+    //   Selected Seat background changed and disabled
+    seatElement.classList.remove("bg-gray-100");
+    seatElement.classList.add("bg-[#1DD100]");
+    seatElement.setAttribute("disabled", false);
+
     //   Seat Left update
     let seatLeft = getInnerTextValue("seats-left") - 1;
     setInnerTextValue("seats-left", seatLeft);
