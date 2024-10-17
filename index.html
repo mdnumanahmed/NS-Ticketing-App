@@ -504,6 +504,7 @@
                 >
               </div>
               <input
+                id="phone-number"
                 type="number"
                 placeholder="Enter your phone number"
                 class="input input-bordered w-full max-w-sm"
@@ -523,6 +524,8 @@
             </label>
             <div class="text-center">
               <button
+                id="next-btn"
+                onclick="my_modal_5.showModal()"
                 class="btn w-2/3 bg-[#1DD100] text-white text-base font-semibold px-5 py-0 font-inter"
               >
                 Next
@@ -532,6 +535,25 @@
         </div>
       </section>
     </section>
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box text-center space-y-5">
+        <img src="assets/success.png" alt="" class="inline-block" />
+        <h3 class="text-lg font-bold">Success!</h3>
+        <p class="py-4">
+          Thank you for Booking Our Bus Seats. We are working hard to find the
+          best service and deals for you. Shortly you will find a confirmation
+          in your email.
+        </p>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
     <script src="scripts/main.js"></script>
   </body>
 </html>

@@ -102,3 +102,15 @@ function applyCoupon() {
     setInnerTextValue("grand-total", grandTotal);
   }
 }
+
+// Next button functionality
+const nextBtn = document.getElementById("next-btn");
+nextBtn.setAttribute("disabled", true);
+const phoneNumber = document.getElementById("phone-number");
+phoneNumber.addEventListener("keyup", function (event) {
+  let number = event.target.value;
+  const seatCount = getInnerTextValue("selected-seat-count");
+  if (seatCount > 0 && number.length > 10) {
+    nextBtn.removeAttribute("disabled", true);
+  }
+});
