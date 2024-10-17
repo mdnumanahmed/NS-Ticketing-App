@@ -22,6 +22,10 @@ for (const seat of allSeats) {
         ? "Premium Economy"
         : "Economy";
 
+    //   Seat Left update
+    let seatLeft = getInnerTextValue("seats-left") - 1;
+    setInnerTextValue("seats-left", seatLeft);
+
     //   Seat Count increasing
     let seatCount = getInnerTextValue("selected-seat-count") + 1;
     setInnerTextValue("selected-seat-count", seatCount);
